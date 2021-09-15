@@ -4,15 +4,13 @@ metadata:
   name: mypod
 spec:
   containers:
-    - name: myfrontend
+    - name: testfrontend
       image: nginx
       volumeMounts:
-      # 指定掛載的目錄
       - mountPath: "/usr/share/nginx/html/"
         name: mypd
   volumes:
-    - name: mypd
-      # 掛載 PVC "myclaim"
+    - name: mypod
       persistentVolumeClaim:
         claimName: myclaim
 

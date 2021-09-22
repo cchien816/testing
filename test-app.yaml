@@ -8,7 +8,8 @@ spec:
     - name: testfrontend
       image: nginx
       volumeMounts:
-      - mountPath: "/usr/share/nginx/html/"
+      #- mountPath: "/usr/share/nginx/html/"
+      - mountPath: "/usr/local/etc/test/"
         name: mypod
   volumes:
     - name: mypod
